@@ -19,15 +19,13 @@ function todos(fn) {
   //    return elem < 2;
   //  });
   // devuelve false.
-  Array.prototype.todos = function(elem){
-    for(var i = 0; i < elem.length; i++){
-      if(elem[i] !== elem.length){
-        return true;
-      }
-      else{
+   Array.prototype.todos = function(fn) {
+    for (let i = 0; i < this.length; i++) {
+      if (!fn(this[i])) {
         return false;
       }
     }
+    return true;
   }
 }
 
