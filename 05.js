@@ -12,7 +12,11 @@ function pedazos(array, cantidad) {
   // pedazos([1,2,3,4,5], 2) -> retorna [[1,2], [3,4], [5]);
   // pedazos([1,2,3,4,5], 4) -> retorna [[1,2,3,4], [5]);
   // pedazos{[1,2],4) -> retorna [[1,2]];
-
+  var resultado = [];
+  for(var i = 0; i < array.length; i += cantidad){
+    resultado.push(array.slice(i, i + cantidad));
+  }
+  return resultado;
 };
 // No modifiques nada debajo de esta linea //
 

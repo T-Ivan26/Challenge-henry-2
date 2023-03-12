@@ -13,7 +13,11 @@ function masFrecuente(array) {
   // Nota: Los numeros pueden NO estar ordenados
 
   // Tu código aca:
-
+  for(var i = 0; i < array.length; i++){
+    if(array[i] === array[i + 1]){
+      return array[i]
+    }
+  }
 }
 
 // No modifiques nada debajo de esta linea //

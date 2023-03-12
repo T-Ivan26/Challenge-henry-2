@@ -19,7 +19,16 @@ function todos(fn) {
   //    return elem < 2;
   //  });
   // devuelve false.
-
+  Array.prototype.todos = function(elem){
+    for(var i = 0; i < elem.length; i++){
+      if(elem[i] !== elem.length){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+  }
 }
 
 // No modifiques nada debajo de esta linea //

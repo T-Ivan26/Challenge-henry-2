@@ -13,7 +13,11 @@ function palabraSimetrica(palabra) {
   // numeroSimetrico('franco') devuelve false
 
   // Tu código:
-  
+  var pala = palabra.split('').reverse().join('');
+  if(pala === palabra){
+    return true;
+  }
+  return false;
 }
 
 // No modifiques nada debajo de esta linea //

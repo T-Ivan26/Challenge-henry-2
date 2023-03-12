@@ -12,35 +12,40 @@ function crearClaseProfesor() {
   // Esta funcion debe retonar la clase Profesor.
 
   class Profesor {
-    constructor() {
-     
+    constructor(nombre, edad, cursos, certificados) {
+     this.nombre = nombre;
+     this.edad = edad;
+     this.cursos = cursos;
+     this.certificados = certificados;
     }
 
     addCertificado(nombre, entidad, anio) {
       // el metodo addCertificado recibe un string nombre, un string entidad y  un entero anio y debe agregar un objeto:
       // { nombre: nombre, entidad: entidad, anio: anio} al arreglo de certificados del profesor.
       // no debe retornar nada.
-
+      var alumno =  {nombre, entidad, anio}
+      this.certificados.push({alumno});
     }
 
     addCurso(curso) {
       // este método debe agregar un Curso (curso) al arreglo de Cursos del profesor.
       // no debe retornar nada.
-
+      this.cursos.push(curso);
     }
 
     getCursos() {
       // Escribe una función que retorne un arreglo con los cursos del profesor
       // Ej:
       // persona.getCursos() // retorna ['javascript 1', 'javascript 2'];
-      
+      return this.cursos;
     }
 
     getCertificados() {
       // Escribe una función que retorne la cantidad de certificados que tiene un profesor
       // Ej:
       // persona.getCertificados() // retorna 3
-      
+      var a = this.certificados.map((cert) => cert.nombre);
+      return a.length;
     }
 
     getUltimoCertificado() {

@@ -24,7 +24,11 @@ function cuentaPorFavor(comidas) {
   // cuentaPorFavor(comidas) devuelve => 33
 
   // Tu código aca:
-  
+  var total = 0;
+  comidas.forEach(
+    comidas => total+=comidas.precio*comidas.cantidad
+  );
+  return total;
 }
 
 // No modifiques nada debajo de esta linea //

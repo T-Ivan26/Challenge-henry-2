@@ -11,7 +11,12 @@ function soloStrings(array) {
   // soloStrings([1, 'Henry', 2, 'Toni']) debe retornar ['Henry', 'Toni']
 
   // Tu código aca:
-  
+  var soloPalabras = [];
+  array.map(val => {
+    if(typeof(val) == 'string')
+    soloPalabras.push(val)
+  })
+  return soloPalabras;
 }
 
 // No modifiques nada debajo de esta linea //
